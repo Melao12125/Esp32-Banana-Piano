@@ -12,6 +12,7 @@ const int pinosBananas[7] = {4, 13, 12, 15, 14, 27, 33 };
 BleKeyboard bleKeyboard("TecladoBanana", "Math e Thigas", 100);
 //=======================================================
 
+//=================== Setup ===========================
 void setup() {
   for (int i = 0; i < 8; i++) {
     touchAttachInterrupt(pinosBananas[i], teclaTocada, 40);
@@ -21,20 +22,24 @@ void setup() {
   Serial.begin(115200);
   bleKeyboard.begin();
 }
+//=======================================================
 
+//================= Loop Principal ======================
 void loop() {
   if(bleKeyboard.isConnected()) {
     Serial.println("Conectado!!!");
   } else {
     Serial.println("Desconectado!!!");
   }
-
   delay(250);
 }
+//=======================================================
 
+//============= Logica das Teclas/Pinos ===================
 void teclaTocada() {
   for (int i = 0; i < 8; i++) {
-    if (touchRead(pinosBananas[i]) < 22) {
+    if (touchRead(pinosBananas[i]) < 22) { // Se a leitura do pino for menor que 22 significa que a tecla está pressionada.
+      //Logica para pressionar a tecla .
       if (!teclaPressionada[i]) {
         teclaPressionada[i] = true;
         bleKeyboard.press(teclas[i][0]); // Pressiona a tecla 
@@ -42,12 +47,14 @@ void teclaTocada() {
         //setDelay()? blekey
         digitalWrite(2, HIGH);
       }
+      //Logica para despressionar tecla e evitar repetição
     } else {
-      if (teclaPressionada[i]) {
+      if (teclaPressionada[i]) { 
         teclaPressionada[i] = false;
-        bleKeyboard.release(teclas[i][0]); // Libera a tecla 
+        bleKeyboard.release(teclas[i][0]);
         digitalWrite(2, LOW);
       }
     }
   }
+  //=====================================================
 }
