@@ -1,8 +1,14 @@
+// Branch Original utilizando apenas BleKeyboard para emulação de teclas BlueTooth
+// Escolha um dos arquivos BleKeyboard ZIP na pasta 'downloads' do repositório e o importe para seu sketch.
+
+// Aviso: Se utilzando a versão otimizada do BleKeyboard importe para o sketch a biblioteca NimBle-Arduino!
+// Não precisa incluir a biblioteca NiBle-Arduino no codigo, só basta estar presente dentro do sketch.
+
 #include <BleKeyboard.h>
 
 //============== Definindo teclas ======================
 String teclas[7] = {"q", "w", "e", "r", "t", "y", "u"};
-//String teclas[7] = {1, 2, 3, 4, 5, 6, 7}
+//String teclas[7] = {1, 2, 3, 4, 5, 6, 7} 
 //String teclas[7] = {i, o, p, a, s, d, f}
 //======================================================
 
