@@ -1,5 +1,5 @@
 // Branch Original utilizando apenas BleKeyboard para emulação de teclas BlueTooth
-// Escolha um dos arquivos BleKeyboard ZIP na pasta 'downloads' do repositório e o importe para seu sketch.
+// Escolha um dos arquivos BleKeyboard ZIP na pasta 'downloads' nesta Branch do repositório e o importe para seu sketch.
 
 // Aviso: Se utilzando a versão otimizada do BleKeyboard importe para o sketch a biblioteca NimBle-Arduino!
 // Não precisa incluir a biblioteca NiBle-Arduino no codigo, só basta estar presente dentro do sketch.
