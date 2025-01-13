@@ -1,4 +1,7 @@
 # Esp32-Banana-Piano
+
+Projeto apresentado na feira regional de ciências de Santa Catarina.
+
 Piano/Teclado de banana utilizando a placa ESP32 com a biblioteca BleKeyboard
 
 Projeto feito para feira de ciencias regional de SC de 2023
